@@ -1,25 +1,73 @@
-.covered-terrace-container {
+.pros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.pro-item {
   display: flex;
-  flex-direction: column;
-  height: calc(
-    100vh - var(--header-height) - var(--breadcrumb-height)
-  ); /* Full viewport height */
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-.beggin-text {
-  /* This section will take its natural height */
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 10px;
+.pro-item:hover {
+  transform: translateY(-5px);
+}
+
+.pro-item i {
+  font-size: 24px;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.pro-item span {
+  font-size: 16px;
+  color: #333;
+}
+
+// faq
+
+.faq-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.faq-container h2 {
   text-align: center;
-
-  p {
-    margin-bottom: 0px;
-  }
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
 }
 
-.gallery-row {
-  flex-grow: 1; /* Allow the gallery row to grow and take up remaining space */
-  // overflow: auto; /* Add scroll if content overflows */
-  max-height: calc(100vh - 206px);
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .faq-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }

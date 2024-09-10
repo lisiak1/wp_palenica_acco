@@ -3,76 +3,26 @@
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: grid;
+  place-items: center; /* Center content horizontally and vertically */
+}
+
+app-root {
+  display: block;
+  width: 100%;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
+  display: block;
   min-height: 100vh;
-}
-
-app-main {
-  flex: 1 0 auto;
-  overflow-y: auto;
-}
-
-app-footer {
-  flex-shrink: 0; /* Prevents the footer from shrinking */
-  text-align: center; /* Optional: Center align text in footer */
-  z-index: 100; /* Ensures the footer is above the content */
+  width: 100%;
+  max-width: var(--max-height);
+  margin: 0 auto; /* Center the container horizontally */
 }
 
 :root {
-  --header-height: 70px;
-  --breadcrumb-height: 44px;
-  --footer-height: 64px;
-
-  --primary-color: #9a6b58;
-  --secondary-color: #6c757d;
-  --black-color: black;
-  --primary-color-solid: darken(#9a6b58, 50%);
-
-  .primary-text {
-    font-weight: bold;
-    color: var(--primary-color);
-    font-size: 20px;
-    font-family: "Gilda Display", serif;
-  }
-
-  .primary-text2 {
-    font-weight: bold;
-    color: var(--primary-color);
-  }
-
-  .black-color {
-    color: var(--black-color);
-  }
-
-  .smaller-icon {
-    font-size: 0.65em; /* Adjust the font-size value as needed */
-  }
-
-  .medium-icon {
-    font-size: 1.2em; /* Adjust the font-size value as needed */
-  }
-
-  .text-primary-custom {
-    font-family: "Gilda Display", serif;
-    font-size: 40px !important; /* Adjust the font size as needed */
-    color: white;
-  }
-
-  // .text-primary-custom2 {
-  //   font-family: "Gilda Display", serif;
-  //   font-size: 16px !important; /* Adjust the font size as needed */
-  //   color: white;
-  // }
-
-  h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    color: #333;
-  }
+  --max-height: 1680px;
 }
